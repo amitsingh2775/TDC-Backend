@@ -64,6 +64,7 @@ export interface IProfessionalDetails {
   industryTier: IndustryTier;
   annualIncomeLPA: number;     
   workCity: string;
+  designation: string;
   
 }
 
