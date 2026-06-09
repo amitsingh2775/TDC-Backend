@@ -1,7 +1,4 @@
-// ─────────────────────────────────────────────
-//  src/index.ts
-//  Server bootstrap
-// ─────────────────────────────────────────────
+
 
 import { createApp } from './app';
 import { AppConfig } from './config';
@@ -29,7 +26,7 @@ function gracefulShutdown(signal: string): void {
 process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
 process.on('SIGINT', () => gracefulShutdown('SIGINT'));
 
-// ── Unhandled Rejection / Uncaught Exception ──
+
 process.on('unhandledRejection', (reason: unknown) => {
   console.error('[Server] Unhandled Promise Rejection:', reason);
 });
