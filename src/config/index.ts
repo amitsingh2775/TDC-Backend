@@ -38,8 +38,7 @@ export const AIConfig = {
   GOOGLE_MODEL: process.env['GOOGLE_MODEL'] ?? 'gemini-1.5-flash',
 } as const;
 
-
-function maskKey(key: string) {
+export function maskKey(key: string) {
   if (!key || key.includes('PLACEHOLDER')) return ' Not Set or Placeholder';
   if (key.length < 10) return ' Key too short (Invalid)';
   return ` Loaded (${key.substring(0, 6)}...${key.substring(key.length - 4)})`;
